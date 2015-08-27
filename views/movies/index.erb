@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Alphabetical Movies</title>
+  </head>
+
+  <body>
+
+  <table style="width:100%">
+    <% movies_pg.to_a.each do |movie|%>
+    <tr>
+
+      <td><a href="/movies/<%= movie['id'].to_s %>"><%=movie["title"]%></td>
+      <td><%=movie["year"]%></td>
+      <td><%=movie["rating"]%></td>
+      <td><%=movie["genre"]%></td>
+      <td><%=movie["studio"]%></td>
+      <%end%>
+    </tr>
+  </table>
+
+
+
+  </body>
+</html>

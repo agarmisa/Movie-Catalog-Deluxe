@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Movie Details</title>
+
+  </head>
+
+  <body>
+<h1><%=movie_dets_pg.to_a[0]["title"]%></h1>
+<h3>Genre</h3>
+<h4><%=movie_dets_pg.to_a[0]["genre"]%></h4>
+<h4><%=movie_dets_pg.to_a[0]["studio"]%></h4>
+    <ul>
+
+      <%movie_dets_pg.to_a.each do |detail|%>
+        <li><a href="/actors/<%= detail['actor_id'].to_s %>"><%= detail["actor"] %></a></li>
+        <li><%= detail["character"] %></li>
+        <li> </li>
+      <%end%>
+
+    </ul>
+
+  </body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Alphabetical Actors</title>
+  </head>
+
+  <body>
+
+    <ul>
+
+          <% actors_pg.to_a.each do |actor|%>
+          <li><a href="/actors/<%= actor['id'].to_s %>"><%= actor["name"] %></a></li>
+          <%end%>
+
+    </ul>
+
+  </body>
+
+</html>

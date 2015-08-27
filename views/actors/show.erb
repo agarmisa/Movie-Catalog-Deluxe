@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Actor Details</title>
+
+  </head>
+
+  <body>
+
+<h1><%=details_pg.to_a[0]["name"]%></h1>
+    <ul>
+
+      <%details_pg.to_a.each do |detail|%>
+
+        <li><a href="/movies/<%= detail['id'].to_s %>"><%=detail["title"]%></li>
+
+        <li><%=detail["character"]%></li>
+        <li> </li>
+      <%end%>
+
+    </ul>
+
+  </body>
+</html>
